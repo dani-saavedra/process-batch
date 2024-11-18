@@ -25,7 +25,7 @@ public class EmailFileProcessorServiceJpa {
 
     public void processFileAndInsert(String fileName) {
         List<EmailEntity> emailEntities = new ArrayList<>();
-
+        log.info("Comenzando inserción");
         try (BufferedReader br = new BufferedReader(
                 new InputStreamReader(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream(fileName))))) {
             String line;
@@ -35,13 +35,13 @@ public class EmailFileProcessorServiceJpa {
                 String emailAddress = parts[0];
                 Integer email = parts.length > 1 && !parts[1].isEmpty() ? Integer.parseInt(parts[1]) : 1;
                 EmailEntity emailEntity = getEmailEntity(parts, emailAddress, email);
-                emailEntities.add(emailEntity);
+                emailRepository.save(emailEntity);
             }
         } catch (IOException e) {
             log.error("Impossible to read file", e);
             throw new RuntimeException("Error reading file: " + e.getMessage());
         }
-        emailRepository.saveAll(emailEntities);
+        log.info("Finaliza inserción");
     }
 
     private static EmailEntity getEmailEntity(String[] parts, String emailAddress, Integer email) {

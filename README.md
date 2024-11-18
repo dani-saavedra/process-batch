@@ -39,5 +39,19 @@ Resultado: tiempo promedio de insertar 500 registros, 120 segundos.Tiempo por re
 tiempo total: 7 minutos con 30 segundos (450.160 segundos)
 
 
-Resultado: tiempo promedio de insertar de 1 registrar: 0.33 seg
+Resultado: tiempo promedio de insertar de 1 registrar: 0.33 seg (jdbc)
 tiempo total: 10 minutos con 54 segundos ( 654.559 segundos)
+
+
+(jpa)
+Resultado: tiempo promedio de insertar de 1 registrar
+2024-11-18T11:45:42.978-05:00  : Comenzando inserción
+2024-11-18T11:51:27.895-05:00 : Finaliza inserción
+saveall
+
+(jpa)
+Resultado: tiempo promedio de insertar de 1 registrar
+22 minutos y 7.997 segundos
+2024-11-18T14:16:19.630-05:00: Comenzando inserción
+2024-11-18T14:38:27.627-05:00 : Finaliza inserción
+1-1
