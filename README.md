@@ -40,4 +40,4 @@ tiempo total: 7 minutos con 30 segundos (450.160 segundos)
 
 
 Resultado: tiempo promedio de insertar de 1 registrar: 0.33 seg
-tiempo total: 11 minutos (660 segundos)
+tiempo total: 10 minutos con 54 segundos ( 654.559 segundos)
