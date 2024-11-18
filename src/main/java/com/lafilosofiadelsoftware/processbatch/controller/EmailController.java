@@ -39,7 +39,7 @@ public class EmailController {
     public ResponseEntity<String> processFileThreads() {
         int availableProcessors = Runtime.getRuntime().availableProcessors();
         log.info("Número de núcleos disponibles: {}", availableProcessors);
-        emailFileProcessorWithThreads.processFileAndInsertConcurrently("emails.txt", Runtime.getRuntime().availableProcessors());
+        emailFileProcessorWithThreads.processFileAndInsertConcurrently("emails_medium.txt", Runtime.getRuntime().availableProcessors());
         log.info("Finalizado guardado");
         return ResponseEntity.ok("savedEmail");
     }

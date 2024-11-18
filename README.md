@@ -1,3 +1,4 @@
+#  2 mil registros
 ### Tiempo para insertar con JDBC un archivo de 2000 registros con batch de 100 registros:
 2024-11-18T10:25:27.139-05:00: Comenzando inserción
 2024-11-18T10:25:27.140-05:00  : Guardando batch
@@ -57,9 +58,17 @@ Resultado: tiempo promedio de insertar de 1 registrar
 1-1
 
 
-Con hilos
+Con hilos 
 2024-11-18T15:58:16.849-05:00: Iniciando guardado
 2024-11-18T15:58:50.394-05:00  Finalizado guardado
 
 
+intento 2
+2024-11-18T16:52:43.527-05:00 : Iniciando guardado
+2024-11-18T16:53:19.216-05:00 : Finalizado guardado
 
+
+# 20  mil registros 
+
+2024-11-18T16:56:28.477-05:00: Iniciando guardado
+2024-11-18T17:01:54.852-05:00: Finalizado guardado

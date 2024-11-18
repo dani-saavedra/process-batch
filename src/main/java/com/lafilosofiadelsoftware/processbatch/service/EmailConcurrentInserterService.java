@@ -20,17 +20,13 @@ public class EmailConcurrentInserterService {
     private final JdbcTemplate jdbcTemplate;
 
     public void insertEmailsConcurrently(List<String[]> emailData, int threadCount) throws ExecutionException, InterruptedException {
-        int batchSize = emailData.size() / threadCount;
+        int batchSize = 100;
         ExecutorService executorService = Executors.newFixedThreadPool(threadCount);
         log.info("Iniciando guardado");
         List<Future<?>> futures = new ArrayList<>();
-
-        for (int i = 0; i < threadCount; i++) {
-            log.info("Comenzando ejecucción hilo {}", i);
-            int start = i * batchSize;
-            int end = (i == threadCount - 1) ? emailData.size() : start + batchSize;
-
-            List<String[]> batch = emailData.subList(start, end);
+        int total = emailData.size();
+        for (int i = 0; i < total; i += batchSize) {
+            List<String[]> batch = emailData.subList(i, Math.min(i + batchSize, total));
             Future<?> submit = executorService.submit(() -> insertBatch(batch));
             futures.add(submit);
         }
