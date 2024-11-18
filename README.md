@@ -55,3 +55,11 @@ Resultado: tiempo promedio de insertar de 1 registrar
 2024-11-18T14:16:19.630-05:00: Comenzando inserción
 2024-11-18T14:38:27.627-05:00 : Finaliza inserción
 1-1
+
+
+Con hilos
+2024-11-18T15:58:16.849-05:00: Iniciando guardado
+2024-11-18T15:58:50.394-05:00  Finalizado guardado
+
+
+
