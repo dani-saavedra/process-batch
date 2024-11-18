@@ -37,3 +37,7 @@ tiempo total: 5 minutos con 37 segundos (336.941 segundos)
 
 Resultado: tiempo promedio de insertar 500 registros, 120 segundos.Tiempo por registro individual: 0.24 seg
 tiempo total: 7 minutos con 30 segundos (450.160 segundos)
+
+
+Resultado: tiempo promedio de insertar de 1 registrar: 0.33 seg
+tiempo total: 11 minutos (660 segundos)
