@@ -9,10 +9,6 @@ spring:
     hibernate:
       ddl-auto: validate
     database-platform: org.hibernate.dialect.MySQL8Dialect
-info:
-  app:
-    name: Resired
-    version: '0.1'
 server:
   servlet:
     context-path: /api
