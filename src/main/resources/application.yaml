@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: resired
+  datasource:
+    password: ${DB_PASS}
+    username: ${DB_USER}
+    url: jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+info:
+  app:
+    name: Resired
+    version: '0.1'
+server:
+  servlet:
+    context-path: /api
