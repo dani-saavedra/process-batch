@@ -37,7 +37,7 @@ public class EmailFileProcessorServiceJdbc {
                 String storageUpdate = parts.length > 4 && !parts[4].isEmpty() ? parts[4] : null;
                 String storageRequest = parts.length > 5 && !parts[5].isEmpty() ? parts[5] : null;
                 batchArgs.add(new Object[]{emailAddress, email, application, flow, storageUpdate, storageRequest});
-                if (batchArgs.size() == 100) {
+                if (batchArgs.size() == 500) {
                     log.info("Guardando batch");
                     jdbcTemplate.batchUpdate(sql, batchArgs);
                     batchArgs.clear();
