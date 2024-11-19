@@ -70,5 +70,12 @@ intento 2
 
 # 20  mil registros 
 
+## JDBC
 2024-11-18T16:56:28.477-05:00: Iniciando guardado
 2024-11-18T17:01:54.852-05:00: Finalizado guardado
+Tiempo total: 5 minutos y 26.375 segundos
+
+## JPA
+2024-11-19T14:20:45.471-05:00: Iniciando guardado
+2024-11-19T14:26:38.818-05:00: Finalizado guardado
+Tiempo total: 5 minutos y 53.347 segundos
